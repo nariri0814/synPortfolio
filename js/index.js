@@ -5,9 +5,6 @@ let isIE2= userAgent.indexOf("msie");
  if(isIE > -1 || isIE2 > -1 ){ 
     alert("해당 브라우저에서 지원하지 않습니다.\n크롬으로 접속 부탁드립니다.")
 }
-
-
-
 $(document).ready(function(){
     /////////////////// 물결효과 ///////////////////
     $('.wave').ripples({
@@ -182,10 +179,16 @@ $(document).ready(function(){
                     }, 60 * sk_i)
                 })(i) 
             }
+            for(let i=0; i<$('.sk_sec2 .skill_box2').length; i++) {
+                (function(sk_i){
+                    setTimeout(function(){
+                        $('.sk_sec2 .skill_box2').eq(sk_i).addClass('sk_ac');
+                    }, 60 * sk_i)
+                })(i) 
+            }
         }
 
-
-    /////////////////// 스크롤 포폴박스 나오게 ////////////////////
+        /////////////////// 스크롤 포폴박스 나오게 ////////////////////
         if(work_top1 <= s_top + 200) {
             $('.work_box1 .work_img_outer').addClass('wk_ac');
             $('.work_box1 .work_detail').addClass('wk_ac');
