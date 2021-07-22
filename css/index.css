@@ -34,13 +34,6 @@ img {
   font-family: "Lora", serif;
 }
 @font-face {
-  font-family: "TmonMonsori";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/TmonMonsori.woff")
-    format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
   font-family: "GmarketSansBold";
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff")
     format("woff");
@@ -318,7 +311,7 @@ header {
 .about_L_sec {
   width: 30%;
   height: 100%;
-  padding: 10% 0 7% 40px;
+  padding: 120px 0 7% 40px;
   box-sizing: border-box;
   text-shadow: 2px 2px 5px #222;
 
@@ -447,75 +440,66 @@ header {
   position: relative;
 }
 .skills_pan {
-  width: 88%;
+  width: calc((100% - 160px) / 3);
   height: 80%;
   background: #fff;
   border-radius: 10px;
-  padding: 50px;
+  padding: 30px;
+  margin: 0 20px;
   box-sizing: border-box;
   color: #333;
   font-family: "S-CoreDream-3Light";
 
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
-.sk_sec_wrap {
+/* .sk_sec_wrap {
   width: 80%;
-}
-.sk_sec2_wrap {
+} */
+/* .sk_sec2_wrap {
   width: 20%;
   height: 100%;
-}
+} */
 .sk_sec {
   width: 100%;
   overflow: hidden;
-
-  /* display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    align-items: center; */
-}
-.sk_sec:first-child {
   margin-bottom: 15px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+.sk_sec:last-child {
+  margin-bottom: 0;
 }
 .skill_box {
-  width: calc((100% - 160px) / 4);
-  font-size: 16px;
+  width: calc((100% - 40px) / 2);
+  font-size: 15px;
   font-weight: 700;
   text-align: center;
   line-height: 25px;
   float: left;
   margin: 10px;
 }
-.sk_sec2 {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+.sk_img {
+  width: 80px;
+  height: 95px;
+  line-height: 95px;
+  margin: 0 auto;
 }
-.skill_box2 {
-  width: 100%;
-  font-size: 16px;
-  font-weight: 700;
-  text-align: center;
-  line-height: 25px;
-  padding: 10px;
+.sk_box_tit {
+  margin: 5px 0;
+  font-size: 18px;
+  font-family: "GmarketSansBold";
 }
 .skill_box img {
-  width: 100px;
+  width: 100%;
   margin-bottom: 20px;
 }
-.skill_box2 img {
-  width: 100px;
-  margin-right: 20px;
-  float: left;
-}
-.skill_box2 p {
-  float: left;
-}
+
 .sk_init_pos {
   transform: translateY(100px);
   opacity: 0;
@@ -525,13 +509,12 @@ header {
   opacity: 1;
   transition: all 1s;
 }
+
 /* ///////////// works ///////////// */
-.work_info {
+/* .work_info {
   width: 100vw;
   height: 250px;
-  /* border: 5px solid #000; */
   box-sizing: border-box;
-  /* background: url(../img/hologram_bg6.jpg); */
   background-image: linear-gradient(to bottom, #ffebee 1%, #9faff9, #a0c4f8);
   background-image: -webkit-linear-gradient(top, #ffebee 1%, #9faff9, #a0c4f8);
   color: #fff;
@@ -563,7 +546,8 @@ header {
 .work_info i {
   font-size: 15px;
   vertical-align: top;
-}
+} */
+
 .works {
   /* border: 2px solid #111; */
   background: #a0c4f8;
@@ -701,8 +685,8 @@ header {
 }
 /* ////////////////////// */
 .work_detail {
-  width: 42%;
-  padding: 15px;
+  width: 45%;
+  padding: 40px;
   box-sizing: border-box;
   background: rgba(255, 255, 255, 0.45);
   display: flex;
@@ -728,14 +712,6 @@ header {
 .w_dt_logo img {
   width: 60%;
 }
-/* .logo_txt{
-    float: left;
-    margin-left: 20px;
-    font-size: 16px;
-    line-height: 19px;
-    font-family: 'TmonMonsori';
-    padding-top: 3px;
-} */
 .w_skill {
   float: left;
   margin: 10px;
