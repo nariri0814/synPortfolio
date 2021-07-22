@@ -54,6 +54,13 @@ img {
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "Cafe24SsurroundAir";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24SsurroundAir.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 /* /////////////////////////////////////// */
 header {
   width: 100%;
@@ -572,7 +579,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* justify-content: space-evenly; */
+  justify-content: space-between;
 }
 .work_img_inner {
   width: 100%;
@@ -613,7 +620,7 @@ header {
   box-sizing: border-box;
   overflow: hidden;
   cursor: pointer;
-
+  float: left;
   position: relative;
   z-index: 10;
 
@@ -640,7 +647,6 @@ header {
   z-index: -12;
 
   transform: skewX(-20deg);
-
   transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1);
   -moz-transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1);
   -o-transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1);
@@ -651,7 +657,7 @@ header {
   width: 0%;
   height: 100%;
   display: block;
-  background: #94a7b8;
+  background: #3f3ce8;
   opacity: 0;
   box-shadow: 2px 0px 14px rgba(0, 0, 0, 0.6);
 
@@ -663,7 +669,6 @@ header {
   transform: skewX(-20deg);
   -ms-transform: skewX(-20deg);
   -webkit-transform: skewX(-20deg);
-
   transition: all 0.3s cubic-bezier(0.2, 0.95, 0.57, 0.99);
   -webkit-transition: all 0.3s cubic-bezier(0.2, 0.95, 0.57, 0.99);
   -moz-transition: all 0.3s cubic-bezier(0.2, 0.95, 0.57, 0.99);
@@ -681,9 +686,33 @@ header {
 }
 .go_btn a {
   display: inline-block;
-  padding: 0 50px;
+  padding: 0 55px;
 }
 /* ////////////////////// */
+.source_btn {
+  width: 240px;
+  height: 60px;
+  text-align: center;
+  letter-spacing: 2px;
+  font-size: 23px;
+  font-weight: 600;
+  line-height: 60px;
+  color: #fff;
+  margin-left: 10px;
+  float: right;
+}
+.source_btn a {
+  display: inline-block;
+}
+.github_img {
+  width: 30px;
+  vertical-align: middle;
+}
+.source_btn:hover {
+  transform: translateX(10px);
+  transition: all 0.3s;
+  color: #222;
+}
 .work_detail {
   width: 45%;
   padding: 40px;
@@ -691,6 +720,7 @@ header {
   background: rgba(255, 255, 255, 0.45);
   display: flex;
   flex-direction: column;
+  font-family: "Cafe24SsurroundAir";
 }
 .work_box_item {
   width: 100%;
@@ -705,8 +735,10 @@ header {
   flex-direction: row;
 }
 .work_box_item h2 {
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
   margin-right: 20px;
+  font-family: "Archivo", sans-serif;
+  font-size: 33px;
   text-shadow: 2px 2px 3px #fff;
 }
 .w_dt_logo img {
@@ -720,7 +752,7 @@ header {
   background: #fff;
   color: #8b8e92;
   font-size: 20px;
-  font-weight: 700;
+  font-family: "GmarketSansBold";
 }
 .w_color_box {
   float: left;
@@ -781,6 +813,28 @@ header {
 .lg_color_cir3 {
   background: #fff;
 }
+/* ///리액트프로젝트/// */
+.react_tit {
+  font-family: "Wemakeprice-Bold";
+  margin-left: 20px;
+  font-size: 35px;
+}
+.react_box_sec {
+  width: 99%;
+  height: 95%;
+  display: flex;
+  align-items: center;
+}
+.react_box {
+  width: calc((100% - 160px) / 4);
+  height: 70%;
+  background: #fff;
+  border-radius: 10px;
+  margin: 20px;
+}
+
+/* /////////////////// */
+
 /* ////work 스크롤애니메이션//// */
 .wk_img_init_pos {
   transform: translateX(-50px);
@@ -793,7 +847,7 @@ header {
 .wk_ac {
   transform: translateX(0);
   opacity: 1;
-  transition: all 1s;
+  transition: all 0.8s;
 }
 /* ////////////////////// */
 
