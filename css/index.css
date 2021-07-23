@@ -232,7 +232,7 @@ header {
   color: #fff;
   position: absolute;
   top: 50%;
-  right: 0;
+  right: 20px;
   transform: translate(32px, -50%) rotate(-90deg);
   letter-spacing: 2px;
 }
@@ -817,13 +817,16 @@ header {
 .react_tit {
   font-family: "Wemakeprice-Bold";
   margin-left: 20px;
+  margin-bottom: 20px;
   font-size: 35px;
+  color: #fff;
+  text-align: center;
 }
 .react_box_sec {
   width: 99%;
   height: 95%;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 }
 .react_box {
   width: calc((100% - 160px) / 4);
@@ -831,8 +834,41 @@ header {
   background: #fff;
   border-radius: 10px;
   margin: 20px;
+  overflow: hidden;
 }
 
+.react_img_box {
+  width: 100%;
+  height: 75%;
+  overflow: hidden;
+}
+
+.react_img1 {
+  background: url(../img/portfolio/todolist.png) no-repeat top / cover;
+}
+.react_img2 {
+  background: url(../img/portfolio/movie.png) no-repeat top / cover;
+}
+.react_img3 {
+  background: url(../img/portfolio/gyeonggido.png) no-repeat top / cover;
+}
+.react_img4 {
+  background: url(../img/portfolio/corona.png) no-repeat top left / cover;
+}
+.react_txt_box {
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  font-family: "S-CoreDream-3Light";
+}
+.react_txt_tit {
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 5px;
+}
+.react_txt_desc {
+  font-size: 16px;
+}
 /* /////////////////// */
 
 /* ////work 스크롤애니메이션//// */
