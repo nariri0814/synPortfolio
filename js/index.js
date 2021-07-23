@@ -108,13 +108,13 @@ $(document).ready(function(){
         // console.log(left);
 
         $('.about_bot_txt').eq(0).css({
-            transform:'translateX('+ (left * $(window).scrollTop())+300+'px)'
+            transform:'translateX('+ (left * $(window).scrollTop())+100+'px)'
         })
         $('.about_bot_txt').eq(1).css({
-            transform:'translateX('+ (-1 * left * $(window).scrollTop())+300 +'px)'
+            transform:'translateX('+ (-1 * left * $(window).scrollTop())+100 +'px)'
         })
         $('.about_bot_txt').eq(2).css({
-            transform:'translateX('+ (left * $(window).scrollTop())+300 +'px)'
+            transform:'translateX('+ (left * $(window).scrollTop())+100 +'px)'
         })
 
 
@@ -198,8 +198,6 @@ $(document).ready(function(){
             $('.work_box2 .work_detail').addClass('wk_ac');
         }
     })
-
-    
 
 
 

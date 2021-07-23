@@ -407,7 +407,7 @@ header {
   margin: 0 10px 10px 7px;
 }
 .about_bot_txt_box {
-  font-size: 43px;
+  font-size: 36px;
 }
 .about_bot_txt {
   white-space: nowrap;
@@ -835,8 +835,78 @@ header {
   border-radius: 10px;
   margin: 20px;
   overflow: hidden;
+  position: relative;
 }
+/* ////////호버박스/////// */
+.react_hov_box {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(27, 27, 27, 0.8);
+  opacity: 0;
+}
+.react_hov_box a {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+}
+.react_hov_line {
+  background: #fff;
+  position: absolute;
+  transition: all 0.3s;
+}
+.line_top {
+  width: 0;
+  height: 2px;
+  top: 30px;
+  left: 10%;
+}
+.line_left {
+  width: 2px;
+  height: 0;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+}
+.line_bottom {
+  width: 0;
+  height: 2px;
+  bottom: 30px;
+  right: 10%;
+}
+.line_right {
+  width: 2px;
+  height: 0;
+  top: 50%;
+  right: 10%;
+  transform: translateY(-50%);
+}
+.react_hov_txt {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
+  text-align: center;
+  font-size: 28px;
+  font-weight: 800;
+  color: #fff;
+}
+.react_hov_box:hover {
+  opacity: 1;
+  transition: all 0.3s;
+}
+.react_hov_box:hover .line_top,
+.react_hov_box:hover .line_bottom {
+  width: 80%;
+}
+.react_hov_box:hover .line_left,
+.react_hov_box:hover .line_right {
+  height: 90%;
+}
+/* /////////////////////// */
 .react_img_box {
   width: 100%;
   height: 75%;
