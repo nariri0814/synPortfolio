@@ -74,8 +74,6 @@ $(document).ready(function(){
     })
 
     /////////////////// 메인 한 판 슬라이드 ////////////////////
-    
-    
     let scrollEvent = true;
     $('.wave').on('mousewheel DOMMouseScroll', function(event){
         event.preventDefault();
@@ -116,8 +114,6 @@ $(document).ready(function(){
         $('.about_bot_txt').eq(2).css({
             transform:'translateX('+ (left * $(window).scrollTop())+100 +'px)'
         })
-
-
     });
     /////////////////// 글자 한칸씩 찍기 ////////////////////
     
@@ -158,9 +154,7 @@ $(document).ready(function(){
                     }
                 }, tp_timer-100);
             }
-
         }, tp_timer)
-
     };
     typing();
     
@@ -169,49 +163,39 @@ $(document).ready(function(){
     let sk_top = $('.skills').offset().top;
     let work_top1 = $('.work_box1').offset().top;
     let work_top2 = $('.work_box2').offset().top;
+    
     $(window).scroll(function(){
-        var s_top = $(window).scrollTop();
+        let s_top = $(window).scrollTop();
         if(sk_top <= s_top + 300) {
-            for(let i=0; i<$('.sk_sec .skill_box').length; i++) {
+            for(let i=0; i<$('.skills_pan .skill_box').length; i++) {
                 (function(sk_i){
                     setTimeout(function(){
                         $('.sk_sec .skill_box').eq(sk_i).addClass('sk_ac');
                     }, 60 * sk_i)
                 })(i) 
             }
-            for(let i=0; i<$('.sk_sec2 .skill_box2').length; i++) {
-                (function(sk_i){
+        }
+        
+        /////////////////// 스크롤 포폴박스 나오게 ////////////////////
+        if(work_top1 <= s_top + 300) {
+            for(let i=0; i<$('.work_box1 .work_box_item').length; i++) {
+                (function(wk_i){
                     setTimeout(function(){
-                        $('.sk_sec2 .skill_box2').eq(sk_i).addClass('sk_ac');
-                    }, 60 * sk_i)
+                        $('.work_box1 .work_box_item').eq(wk_i).addClass('wk_ac');
+                    }, 60 * wk_i)
                 })(i) 
             }
         }
-
-        /////////////////// 스크롤 포폴박스 나오게 ////////////////////
-        if(work_top1 <= s_top + 200) {
-            $('.work_box1 .work_img_outer').addClass('wk_ac');
-            $('.work_box1 .work_detail').addClass('wk_ac');
-        }
-        if(work_top2 <= s_top + 200) {
-            $('.work_box2 .work_img_outer').addClass('wk_ac');
-            $('.work_box2 .work_detail').addClass('wk_ac');
+        if(work_top2 <= s_top + 300) {
+            for(let i=0; i<$('.work_box2 .work_box_item').length; i++) {
+                (function(wk_i){
+                    setTimeout(function(){
+                        $('.work_box2 .work_box_item').eq(wk_i).addClass('wk_ac');
+                    }, 60 * wk_i)
+                })(i) 
+            }
         }
     })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    
 });
 

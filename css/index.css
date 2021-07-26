@@ -10,6 +10,21 @@ h6 {
   margin: 0;
   padding: 0;
 }
+/* 스크롤바 */
+*::-webkit-scrollbar {
+  width: 15px;
+}
+*::-webkit-scrollbar-track {
+  background-color: #e6cfe0;
+  box-shadow: inset 0 0 5px #fff;
+}
+*::-webkit-scrollbar-thumb {
+  background-clip: padding-box;
+  background-image: linear-gradient(#fabaec, #6e8bff);
+  border: 3px solid transparent;
+  border-radius: 30px;
+}
+/* ///////////// */
 ul {
   list-style: none;
 }
@@ -29,9 +44,6 @@ img {
 }
 .bevan_font {
   font-family: "Bevan", cursive;
-}
-.lora_font {
-  font-family: "Lora", serif;
 }
 @font-face {
   font-family: "GmarketSansBold";
@@ -307,7 +319,7 @@ header {
   background: fixed url(../img/hologram_bg11_bk5.jpg) no-repeat center / cover;
   /* overflow: hidden; */
   position: relative;
-  padding-bottom: 110px;
+  padding: 6% 0;
   box-sizing: border-box;
 
   display: flex;
@@ -318,7 +330,7 @@ header {
 .about_L_sec {
   width: 30%;
   height: 100%;
-  padding: 120px 0 7% 40px;
+  padding: 5% 0 5% 40px;
   box-sizing: border-box;
   text-shadow: 2px 2px 5px #222;
 
@@ -327,6 +339,7 @@ header {
   justify-content: space-between;
 }
 .about_txt1 {
+  height: 120px;
   font-size: 3vw;
   font-weight: 500;
   font-family: "GmarketSansBold";
@@ -335,7 +348,7 @@ header {
   font-size: 1.8vw;
   font-weight: 700;
   /* line-height: 32px; */
-  margin-top: 110px;
+  /* margin-top: 110px; */
 }
 .about_M_sec {
   width: 30%;
@@ -514,56 +527,18 @@ header {
 .sk_ac {
   transform: translateY(0);
   opacity: 1;
-  transition: all 1s;
+  transition: all 0.4s;
 }
 
 /* ///////////// works ///////////// */
-/* .work_info {
-  width: 100vw;
-  height: 250px;
-  box-sizing: border-box;
-  background-image: linear-gradient(to bottom, #ffebee 1%, #9faff9, #a0c4f8);
-  background-image: -webkit-linear-gradient(top, #ffebee 1%, #9faff9, #a0c4f8);
-  color: #fff;
-  font-family: "GmarketSansBold";
-
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-.work_info h1 {
-  padding-right: 65px;
-  box-sizing: border-box;
-}
-.work_info h1 {
-  font-size: 45px;
-  -webkit-text-stroke-width: 3px;
-  -webkit-text-stroke-color: #fff;
-  -webkit-text-fill-color: transparent;
-}
-.work_info_txt {
-  padding: 30px 35px;
-  background: #9dacef;
-  border-radius: 20px;
-}
-.work_info p {
-  font-size: 27px;
-}
-.work_info i {
-  font-size: 15px;
-  vertical-align: top;
-} */
 
 .works {
-  /* border: 2px solid #111; */
   background: #a0c4f8;
 }
 .work_box {
   width: 100vw;
   height: 100%;
   display: flex;
-  flex-direction: row;
   justify-content: space-around;
   align-items: center;
 }
@@ -573,13 +548,8 @@ header {
   max-height: 696px;
   padding-bottom: 20px;
   box-sizing: border-box;
-  /* background: rgba(255, 255, 255, 0.45); */
+  text-align: center;
   position: relative;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
 }
 .work_img_inner {
   width: 100%;
@@ -604,6 +574,11 @@ header {
   width: 14%;
   top: 55%;
   left: 49%;
+}
+.work_btn_sec {
+  display: inline-block;
+  overflow: hidden;
+  margin-top: 20px;
 }
 /* //go 버튼// */
 .go_btn {
@@ -698,7 +673,6 @@ header {
   font-weight: 600;
   line-height: 60px;
   color: #fff;
-  margin-left: 10px;
   float: right;
 }
 .source_btn a {
@@ -714,12 +688,10 @@ header {
   color: #222;
 }
 .work_detail {
-  width: 45%;
+  width: 40%;
   padding: 40px;
   box-sizing: border-box;
   background: rgba(255, 255, 255, 0.45);
-  display: flex;
-  flex-direction: column;
   font-family: "Cafe24SsurroundAir";
 }
 .work_box_item {
@@ -764,7 +736,6 @@ header {
   box-shadow: 1px 1px 4px #555;
   border-radius: 50%;
   margin: 0 auto 7px;
-  /* margin-bottom: 7px; */
 }
 .color_cir1 {
   background: #222;
@@ -782,9 +753,6 @@ header {
   font-weight: 600;
   margin: 5px 15px;
 }
-/* .w_dt_desc{
-    font-family: 'S-CoreDream-3Light';
-} */
 .w_dt_desc_p {
   font-size: 19px;
   font-weight: 500;
@@ -816,21 +784,20 @@ header {
 /* ///리액트프로젝트/// */
 .react_tit {
   font-family: "Wemakeprice-Bold";
-  margin-left: 20px;
-  margin-bottom: 20px;
+  padding: 40px 0;
   font-size: 35px;
   color: #fff;
   text-align: center;
 }
 .react_box_sec {
   width: 99%;
-  height: 95%;
+  height: 87%;
   display: flex;
   align-items: flex-start;
 }
 .react_box {
   width: calc((100% - 160px) / 4);
-  height: 70%;
+  height: 78%;
   background: #fff;
   border-radius: 10px;
   margin: 20px;
@@ -918,7 +885,6 @@ header {
   height: 75%;
   overflow: hidden;
 }
-
 .react_img1 {
   background: url(../img/portfolio/todolist.png) no-repeat top / cover;
 }
@@ -948,18 +914,15 @@ header {
 /* /////////////////// */
 
 /* ////work 스크롤애니메이션//// */
-.wk_img_init_pos {
-  transform: translateX(-50px);
-  opacity: 0;
-}
-.wk_detail_init_pos {
+
+.wk_init {
   transform: translateX(50px);
-  opacity: 0;
+  opacity: 1;
 }
 .wk_ac {
   transform: translateX(0);
   opacity: 1;
-  transition: all 0.8s;
+  transition: all 0.4s;
 }
 /* ////////////////////// */
 
