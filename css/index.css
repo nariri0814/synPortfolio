@@ -537,7 +537,7 @@ header {
 }
 .work_box {
   width: 100vw;
-  height: 100%;
+  height: 100vh;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -863,6 +863,8 @@ header {
   font-weight: 800;
   color: #fff;
   padding: 10px 0;
+  box-sizing: border-box;
+  transition: all 0.4s;
 }
 .react_hov_box:hover {
   opacity: 1;
@@ -877,7 +879,7 @@ header {
   height: 90%;
 }
 .react_hov_txt_box a:hover .react_hov_txt {
-  color: #9694eb;
+  border: 2px solid #fff;
 }
 /* /////////////////////// */
 .react_img_box {
