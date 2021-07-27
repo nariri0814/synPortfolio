@@ -12,7 +12,7 @@ h6 {
 }
 /* 스크롤바 */
 *::-webkit-scrollbar {
-  width: 15px;
+  width: 13px;
 }
 *::-webkit-scrollbar-track {
   background-color: #e6cfe0;
@@ -129,6 +129,9 @@ header {
   padding: 10px;
   box-sizing: border-box;
   position: relative;
+}
+.gnb_menu a {
+  padding: 10px 0;
 }
 .gnb_square_wrap {
   width: 100%;
@@ -293,8 +296,8 @@ header {
   color: #fff;
   /* background-image: -webkit-linear-gradient(top, #638479, #91b3a7);
     background-image: linear-gradient(to bottom, #638479, #91b3a7); */
-  background-image: linear-gradient(to bottom, #879be8 8%, #ffebee);
-  background-image: -webkit-linear-gradient(top, #879be8 8%, #ffebee);
+  background-image: linear-gradient(to bottom, #879be8 8%, #a0c4f899);
+  background-image: -webkit-linear-gradient(top, #879be8 8%, #a0c4f899);
 }
 .sec {
   width: 100vw;
@@ -469,6 +472,7 @@ header {
   box-sizing: border-box;
   color: #333;
   font-family: "S-CoreDream-3Light";
+  box-shadow: rgb(22 22 26 / 5%) 0px 5px 16px, rgb(22 22 26 / 5%) 0px 5px 32px;
 
   display: flex;
   flex-direction: column;
@@ -533,7 +537,19 @@ header {
 /* ///////////// works ///////////// */
 
 .works {
-  background: #a0c4f8;
+  background: rgba(160, 196, 248, 0.6);
+  /* background-image: linear-gradient(
+    to bottom,
+    #ffebee 8%,
+    #fff 84%,
+    #d1abcc 8%
+  ); */
+  /* background-image: -webkit-linear-gradient(
+    top,
+    #ffebee 8%,
+    #fff 84%,
+    #d1abcc 8%
+  ); */
 }
 .work_box {
   width: 100vw;
@@ -568,17 +584,17 @@ header {
 .dk_ipad {
   width: 42%;
   top: 50%;
-  left: 55%;
+  left: 58%;
 }
 .dk_iphone {
   width: 14%;
   top: 55%;
-  left: 49%;
+  left: 52%;
 }
 .work_btn_sec {
   display: inline-block;
   overflow: hidden;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 /* //go 버튼// */
 .go_btn {
@@ -589,9 +605,9 @@ header {
   font-weight: 700;
   line-height: 60px;
   letter-spacing: 2px;
-  color: #fff;
+  color: #222;
   background: transparent;
-  border: 2px solid #fff;
+  border: 2px solid #222;
   box-sizing: border-box;
   overflow: hidden;
   cursor: pointer;
@@ -604,15 +620,17 @@ header {
   transition: all 0.2s ease-in-out;
 }
 .go_btn:hover {
-  border: 2px solid #f8f2bc;
-  color: #94a7b8;
+  /* border: 2px solid #f8f2bc; */
+  border: 2px solid #ffddf5;
+  color: #1b1a50;
 }
 .go_btn::before {
   content: "";
   width: 0%;
   height: 100%;
   /* display: block; */
-  background: #f8f2bc;
+  /* background: #f8f2bc; */
+  background: #ffddf5;
   opacity: 1;
   box-shadow: 2px 0px 14px rgba(0, 0, 0, 0.6);
 
@@ -632,7 +650,7 @@ header {
   width: 0%;
   height: 100%;
   display: block;
-  background: #3f3ce8;
+  background: #1b1a50;
   opacity: 0;
   box-shadow: 2px 0px 14px rgba(0, 0, 0, 0.6);
 
@@ -667,12 +685,13 @@ header {
 .source_btn {
   width: 240px;
   height: 60px;
+  margin-left: 10px;
   text-align: center;
   letter-spacing: 2px;
   font-size: 23px;
   font-weight: 600;
   line-height: 60px;
-  color: #fff;
+  color: #222;
   float: right;
 }
 .source_btn a {
@@ -685,14 +704,15 @@ header {
 .source_btn:hover {
   transform: translateX(10px);
   transition: all 0.3s;
-  color: #222;
 }
 .work_detail {
   width: 40%;
   padding: 40px;
   box-sizing: border-box;
-  background: rgba(255, 255, 255, 0.45);
+  background: rgba(255, 255, 255, 0.8);
   font-family: "Cafe24SsurroundAir";
+  box-shadow: rgb(22 22 26 / 5%) 0px 5px 16px, rgb(22 22 26 / 5%) 0px 5px 32px;
+  border-radius: 17px;
 }
 .work_box_item {
   width: 100%;
@@ -715,12 +735,15 @@ header {
 }
 .w_dt_logo img {
   width: 60%;
+  margin: 0 auto;
+  margin-bottom: 10px;
 }
 .w_skill {
   float: left;
   margin: 10px;
   padding: 8px 11px;
   box-sizing: border-box;
+  box-shadow: rgb(22 22 26 / 10%) 4px 4px 12px;
   background: #fff;
   color: #8b8e92;
   font-size: 20px;
@@ -759,7 +782,7 @@ header {
   font-family: "S-CoreDream-3Light";
 }
 .w_dt_desc_cp {
-  margin-top: 20px;
+  margin-top: 40px;
   font-size: 21px;
   font-weight: 800;
 }
@@ -769,8 +792,8 @@ header {
 }
 .lagom_iphone {
   width: 14%;
-  top: 55%;
-  left: 80%;
+  top: 49%;
+  left: 73%;
 }
 .lg_color_cir1 {
   background: #c9cacd;
@@ -784,23 +807,22 @@ header {
 /* ///리액트프로젝트/// */
 .react_tit {
   font-family: "Wemakeprice-Bold";
-  padding: 40px 0;
-  font-size: 35px;
+  font-size: 32px;
   color: #fff;
   text-align: center;
 }
 .react_box_sec {
-  width: 99%;
+  width: 100%;
   height: 87%;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
 }
 .react_box {
-  width: calc((100% - 160px) / 4);
+  width: calc((100% - 95px) / 4);
   height: 78%;
   background: #fff;
   border-radius: 10px;
-  margin: 20px;
+  margin: 10px;
   overflow: hidden;
   position: relative;
 }
@@ -930,8 +952,8 @@ header {
 
 /* ///////////// contact ///////////// */
 .contact {
-  background-image: linear-gradient(to bottom, #d1abcc, #cbe3f9);
-  background-image: -webkit-linear-gradient(top, #d1abcc, #cbe3f9);
+  background-image: linear-gradient(to bottom, #a0c4f899, #fff);
+  background-image: -webkit-linear-gradient(top, #a0c4f899, #fff);
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -947,6 +969,7 @@ header {
   /* padding: 20px;
     box-sizing: border-box; */
   position: relative;
+  box-shadow: rgb(22 22 26 / 5%) 0px 5px 16px, rgb(22 22 26 / 5%) 0px 5px 32px;
 }
 .contact_box a {
   width: 100%;
