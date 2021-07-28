@@ -387,6 +387,8 @@ header {
 .pf_li {
   width: 100%;
   padding: 10px;
+  box-sizing: border-box;
+  border-radius: 10px;
   margin-bottom: 10px;
   background: rgba(255, 255, 255, 0.6);
 }
@@ -413,6 +415,7 @@ header {
   color: #777;
   padding: 10px;
   box-sizing: border-box;
+  border-radius: 10px;
   background: rgba(255, 255, 255, 0.6);
 }
 .about_R_txt_box_ac {
