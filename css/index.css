@@ -1086,6 +1086,13 @@ header {
   .w_skill {
     padding: 7px;
   }
+  .work_detail {
+    padding: 15px;
+    border-radius: 12px;
+  }
+  .react_hov_txt {
+    font-size: 24px;
+  }
 }
 @media (max-width: 767px) {
   .header_wrap {
@@ -1167,10 +1174,7 @@ header {
   .github_img {
     width: 12%;
   }
-  .work_detail {
-    padding: 15px;
-    border-radius: 12px;
-  }
+
   .work_box_item {
     margin-bottom: 5px;
   }
