@@ -61,11 +61,7 @@ $(document).ready(function(){
     /////////////////// gnb 메뉴 ////////////////////
     $('.gnb_menu').hover(function(){
         $(this).css({
-            color: '#3f3ce8' //진파랑
-            // color: '#92eeee' //민트
-            // color: '#b9a2be' //말린장미
-            // color: '#f7f1bd' //노랑
-            
+            color: '#3f3ce8'
         })
     },function(){
         $(this).css({
@@ -99,12 +95,13 @@ $(document).ready(function(){
     });
 
     /////////////////// about me 밑에 글씨 3줄 슬라이드 ////////////////////
-   
+    $('.about_bot_txt_box').eq(0).outerWidth($('.about_bot_txt').eq(0).outerWidth())
+    console.log($('.about_bot_txt_box').eq(0).outerWidth())
     $(window).scroll(function(){
         let left = ($(window).scrollTop() / ($(document).outerHeight() - $(window).height()));
 
         // console.log(left);
-
+// console.log($('.about_bot_txt').eq(0).outerWidth())
         $('.about_bot_txt').eq(0).css({
             transform:'translateX('+ (left * $(window).scrollTop())+100+'px)'
         })
@@ -128,11 +125,9 @@ $(document).ready(function(){
             txt_array.push("<br>") 
         }
     }
-
     $('.about_txt1').empty();
-
     function typing() {
-        let tp_timer = 150;
+        let tp_timer = 260;
         let tp_index = 0;
         
         let inter_1 = setInterval(function(){
