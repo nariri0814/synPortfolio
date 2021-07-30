@@ -105,7 +105,7 @@ header {
   border: 3px solid #fff;
 
   color: #fff;
-  font-size: 2.5vw;
+  font-size: 2.4vw;
   font-weight: 900;
   text-align: center;
   line-height: 65px;
@@ -167,7 +167,7 @@ header {
   width: 100vw;
   height: 100vh;
   background: url(img/hologram_bg1.png) no-repeat center / cover;
-  background-size: 100%;
+  /* background-size: 100%; */
   position: relative;
   user-select: none;
 }
@@ -200,7 +200,7 @@ header {
 }
 /* /////////////////////////// */
 .main_let {
-  font-size: 5.8vw;
+  font-size: 5.6vw;
   font-weight: 900;
 }
 .main_border {
@@ -271,18 +271,17 @@ header {
 .grad_bg_main {
   width: 100%;
   height: 100px;
-  /* background-image: linear-gradient(to bottom, transparent, #638479 100px, #91b3a7); */
   background-image: linear-gradient(
     to bottom,
     transparent,
-    #879be8 100px,
-    #879be8
+    #8ab4e7 100px,
+    #8ab4e7
   );
   background-image: -webkit-linear-gradient(
     top,
     transparent,
-    #879be8 100px,
-    #879be8
+    #8ab4e7 100px,
+    #8ab4e7
   );
   position: absolute;
   bottom: 0;
@@ -297,15 +296,106 @@ header {
   color: #fff;
   /* background-image: -webkit-linear-gradient(top, #638479, #91b3a7);
     background-image: linear-gradient(to bottom, #638479, #91b3a7); */
-  background-image: linear-gradient(to bottom, #879be8 8%, #a0c4f899);
-  background-image: -webkit-linear-gradient(top, #879be8 8%, #a0c4f899);
+  background-image: linear-gradient(to bottom, #8ab4e7 8%, #a0c4f899);
+  background-image: -webkit-linear-gradient(top, #8ab4e7 8%, #a0c4f899);
 }
 .sec {
   width: 100vw;
   height: 100vh;
 }
 /* ///////////// about me ///////////// */
-.aboutme {
+
+.about {
+  width: 100%;
+  overflow: hidden;
+  background: orange;
+}
+.about_sec1 {
+  width: 100%;
+  height: 100vh;
+  padding-top: 90px;
+  box-sizing: border-box;
+}
+.about_sec1_top {
+  width: 100%;
+  height: 70%;
+}
+.about_img_box {
+  width: 50%;
+  height: 100%;
+  float: left;
+  position: relative;
+}
+.about_img_box img {
+  width: 45%;
+  position: absolute;
+  top: 5%;
+  left: 24%;
+  box-shadow: 20px 20px 5px 1px #fff;
+}
+.about_img_bot {
+  width: 70%;
+  height: 48%;
+  background-color: #fff;
+  position: absolute;
+  left: 0;
+  bottom: -40px;
+  z-index: 3;
+}
+.about_txt_box {
+  width: 50%;
+  height: 100%;
+  float: right;
+  font-family: "GmarketSansBold";
+  font-size: 3.2vw;
+  padding: 14% 0 0 5%;
+  box-sizing: border-box;
+}
+.about_move_txt_box {
+  width: 100%;
+  height: 25%;
+  clear: both;
+  position: relative;
+}
+.about_bot_txt {
+  white-space: nowrap;
+  font-style: italic;
+  font-size: 2.8vw;
+  position: absolute;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-fill-color: transparent;
+}
+.a_b_txt1,
+.a_b_txt3 {
+  -webkit-text-stroke-color: #5856a8;
+}
+.a_b_txt1 {
+  right: 0px;
+  top: 0%;
+}
+.a_b_txt2 {
+  -webkit-text-stroke-color: #fff;
+  left: 0px;
+  top: 18%;
+}
+.a_b_txt3 {
+  right: 0px;
+  top: 36%;
+}
+.about_sec2 {
+  width: 100%;
+  overflow: hidden;
+}
+.about_desc_box {
+  width: 40%;
+  display: inline-block;
+}
+.about_detail_box {
+  width: 55%;
+  display: inline-block;
+}
+
+/* .aboutme {
   padding-top: 70px;
   box-sizing: border-box;
   font-family: "Wemakeprice-Bold";
@@ -320,7 +410,6 @@ header {
   width: 85%;
   height: 90%;
   background: fixed url(../img/hologram_bg11_bk5.jpg) no-repeat center / cover;
-  /* overflow: hidden; */
   position: relative;
   padding: 6% 0;
   box-sizing: border-box;
@@ -350,8 +439,6 @@ header {
 .about_txt2 {
   font-size: 1.8vw;
   font-weight: 700;
-  /* line-height: 32px; */
-  /* margin-top: 110px; */
 }
 .about_M_sec {
   width: 30%;
@@ -367,8 +454,6 @@ header {
 .about_R_sec {
   width: 40%;
   height: 100%;
-  /* padding-bottom: 50px;
-  box-sizing: border-box; */
 
   display: flex;
   flex-direction: column;
@@ -455,7 +540,7 @@ header {
   position: absolute;
   right: 0px;
   bottom: 2%;
-}
+} */
 
 /* ///////////// skills ///////////// */
 .skills {
@@ -1292,10 +1377,6 @@ header {
   }
 }
 @media (max-width: 480px) {
-  .wave {
-    background: url(img/hologram_bg1.png) no-repeat center / cover;
-    background-size: auto;
-  }
   .gnb_menu {
     margin: 0 5px;
   }

@@ -2,11 +2,12 @@ let userAgent = window.navigator.userAgent.toLowerCase();
 let isIE = userAgent.indexOf('trident');  
 let isIE2= userAgent.indexOf("msie");
 
- if(isIE > -1 || isIE2 > -1 ){ 
+if(isIE > -1 || isIE2 > -1 ){ 
     alert("해당 브라우저에서 지원하지 않습니다.\n크롬으로 접속 부탁드립니다.")
 }
 $(document).ready(function(){
     /////////////////// 물결효과 ///////////////////
+    
     $('.wave').ripples({
         resolution: 130,
         perturbance: 0.01
@@ -19,6 +20,7 @@ $(document).ready(function(){
         $(".main_txt").fadeIn(600);
         $(".main_txt").trigger('mousedown');
     },600);
+    
     /////////////////// 헤더스크롤 ////////////////////
     // let h_top = $('header').height();
     var sec2_top = $('.aboutme').offset().top;
@@ -96,7 +98,6 @@ $(document).ready(function(){
 
     /////////////////// about me 밑에 글씨 3줄 슬라이드 ////////////////////
     $('.about_bot_txt_box').eq(0).outerWidth($('.about_bot_txt').eq(0).outerWidth())
-    console.log($('.about_bot_txt_box').eq(0).outerWidth())
     $(window).scroll(function(){
         let left = ($(window).scrollTop() / ($(document).outerHeight() - $(window).height()));
 
@@ -151,7 +152,7 @@ $(document).ready(function(){
             }
         }, tp_timer)
     };
-    typing();
+    // typing();
     
 
     /////////////////// 스크롤 스킬박스 하나씩 나오게 ////////////////////
@@ -189,12 +190,6 @@ $(document).ready(function(){
                     }, 60 * wk_i)
                 })(i) 
             }
-        }
-    })
-    
-    $(window).resize(function() {
-        if($(window).width() > 768) {
-            //효과 돌리기
         }
     })
 });
