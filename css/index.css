@@ -305,10 +305,9 @@ header {
 }
 /* ///////////// about me ///////////// */
 
-.about {
+.aboutme {
   width: 100%;
   overflow: hidden;
-  background: orange;
 }
 .about_sec1 {
   width: 100%;
@@ -318,7 +317,7 @@ header {
 }
 .about_sec1_top {
   width: 100%;
-  height: 70%;
+  height: 75%;
 }
 .about_img_box {
   width: 50%;
@@ -348,199 +347,125 @@ header {
   float: right;
   font-family: "GmarketSansBold";
   font-size: 3.2vw;
-  padding: 14% 0 0 5%;
+  padding: 13% 0 0 5%;
   box-sizing: border-box;
 }
 .about_move_txt_box {
   width: 100%;
-  height: 25%;
+  height: 20%;
   clear: both;
   position: relative;
 }
 .about_bot_txt {
   white-space: nowrap;
   font-style: italic;
-  font-size: 2.8vw;
+  font-size: 38px;
   position: absolute;
   -webkit-text-stroke-width: 2px;
   -webkit-text-fill-color: transparent;
 }
 .a_b_txt1,
 .a_b_txt3 {
-  -webkit-text-stroke-color: #5856a8;
+  -webkit-text-stroke-color: #324aa2;
 }
 .a_b_txt1 {
   right: 0px;
-  top: 0%;
+  top: 0;
 }
 .a_b_txt2 {
   -webkit-text-stroke-color: #fff;
   left: 0px;
-  top: 18%;
+  top: 40px;
 }
 .a_b_txt3 {
   right: 0px;
-  top: 36%;
+  top: 80px;
 }
+
 .about_sec2 {
   width: 100%;
   overflow: hidden;
-}
-.about_desc_box {
-  width: 40%;
-  display: inline-block;
-}
-.about_detail_box {
-  width: 55%;
-  display: inline-block;
-}
-
-/* .aboutme {
-  padding-top: 70px;
-  box-sizing: border-box;
-  font-family: "Wemakeprice-Bold";
-  position: relative;
+  font-family: "GmarketSansBold";
+  padding: 4% 0;
 
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-direction: column;
-}
-.about_bg {
-  width: 85%;
-  height: 90%;
-  background: fixed url(../img/hologram_bg11_bk5.jpg) no-repeat center / cover;
-  position: relative;
-  padding: 6% 0;
-  box-sizing: border-box;
-
-  display: flex;
-  flex-direction: row;
   justify-content: space-around;
   align-items: center;
 }
-.about_L_sec {
-  width: 30%;
-  height: 100%;
-  padding: 5% 0 5% 40px;
-  box-sizing: border-box;
-  text-shadow: 2px 2px 5px #222;
+.about_desc_box {
+  padding: 10% 5%;
+  font-size: 1.9vw;
+  text-shadow: 1px 1px 5px rgb(34 34 34 / 40%);
+}
+.about_detail_box {
+  width: 35%;
+  position: relative;
+  padding: 3% 1%;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: rgb(22 22 26 / 5%) 0px 5px 16px, rgb(22 22 26 / 5%) 0px 5px 32px;
 }
-.about_txt1 {
-  height: 120px;
-  font-size: 3vw;
-  font-weight: 500;
-  font-family: "GmarketSansBold";
-}
-.about_txt2 {
-  font-size: 1.8vw;
-  font-weight: 700;
-}
-.about_M_sec {
-  width: 30%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-}
-.about_img {
-  width: 100%;
-  height: 100%;
-  background: url(../img/my.jpg) no-repeat center / contain;
-}
-.about_R_sec {
-  width: 40%;
-  height: 100%;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.ab_detail_tit {
+  text-align: center;
+  font-size: 1.7vw;
+  padding: 7px 14px;
+  color: #324aa2;
+  background: #fff;
+  box-shadow: 0 0 5px 2px rgb(22 22 26 / 15%);
+  position: absolute;
+  top: -8%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .profile {
   width: 90%;
-  overflow: hidden;
   font-size: 1.4vw;
-  font-weight: 600;
-  margin: 10px;
+  margin: 0 auto;
   user-select: none;
-  text-shadow: 1px 1px 5px #222;
+  /* text-shadow: 1px 1px 5px #222; */
 }
 .pf_li {
   width: 100%;
   padding: 10px;
+  padding-left: 15px;
   box-sizing: border-box;
   border-radius: 10px;
   margin-bottom: 10px;
-  background: rgba(255, 255, 255, 0.6);
+  box-shadow: rgb(22 22 26 / 5%) 0px 5px 16px, rgb(22 22 26 / 5%) 0px 5px 32px;
+  color: #555;
+  font-family: "Wemakeprice-Bold";
 }
 .profile i {
-  font-size: 20px;
+  font-size: 1.3vw;
   margin-right: 5px;
   vertical-align: baseline;
 }
-.about_R_more {
-  font-size: 1.3vw;
-  font-weight: 600;
-  text-shadow: 1px 1px 5px #222;
-  margin-bottom: 20px;
+.ab_detail_more {
+  font-size: 1vw;
+  color: rgba(51, 51, 51, 0.6);
+  text-align: center;
+  margin: 20px 0;
 }
-.about_R_more i {
+.ab_detail_more i {
   margin-right: 10px;
   vertical-align: middle;
   font-size: 22px;
 }
-.about_R_txt_box {
+.ab_detail_more_txt_box {
   width: 90%;
   font-size: 1vw;
   font-family: "S-CoreDream-3Light";
-  color: #777;
+
+  margin: 0 auto;
   padding: 10px;
   box-sizing: border-box;
   border-radius: 10px;
-  background: rgba(255, 255, 255, 0.6);
 }
-.about_R_txt_box_ac {
-  display: block;
-  transition: all 0.3s;
+.ab_dt_txt {
+  line-height: 1.6;
+  color: rgba(51, 51, 51, 0.8);
 }
-.about_R_txt {
-  margin: 0 10px 10px 7px;
-}
-.about_bot_txt_box {
-  font-size: 33px;
-}
-.about_bot_txt {
-  white-space: nowrap;
-  font-style: italic;
-}
-.about_R_txt:last-child {
-  margin-bottom: 0;
-}
-.a_b_txt1,
-.a_b_txt3 {
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: #5856a8;
-  -webkit-text-fill-color: transparent;
-}
-.a_b_txt1 {
-  position: absolute;
-  right: 0;
-  bottom: 12%;
-}
-.a_b_txt2 {
-  position: absolute;
-  left: 0px;
-  bottom: 7%;
-}
-.a_b_txt3 {
-  position: absolute;
-  right: 0px;
-  bottom: 2%;
-} */
 
 /* ///////////// skills ///////////// */
 .skills {
@@ -890,7 +815,7 @@ header {
   font-size: 2.3vw;
   color: #fff;
   text-align: center;
-  padding: 0 3%;
+  padding: 3%;
 }
 .react_box_sec {
   width: 100%;
@@ -1092,7 +1017,14 @@ header {
 }
 
 /* /////////////////////////////////////// */
-
+@media (max-width: 1360px) {
+  .about_sec1_top {
+    height: 65%;
+  }
+  .about_bot_txt {
+    font-size: 32px;
+  }
+}
 @media (max-width: 1135px) {
   .year_circle {
     width: 78px;
@@ -1103,16 +1035,40 @@ header {
   .scroll_txt_box {
     transform: translate(-3px, 125px) rotate(-90deg);
   }
+  .about_sec1_top {
+    height: 60%;
+  }
   .about_L_sec {
     justify-content: space-around;
   }
-  .about_bot_txt_box {
+  .about_bot_txt {
     font-size: 26px;
+  }
+  .about_sec1 {
+    height: 90vh;
+  }
+  .work_box {
+    height: 80vh;
   }
 }
 @media (max-width: 1000px) {
   .w_skill {
     margin: 4px;
+  }
+  .sec {
+    height: 85vh;
+  }
+  .about_sec1 {
+    height: 78vh;
+  }
+  .about_bot_txt_box {
+    font-size: 24px;
+  }
+  .a_b_txt2 {
+    top: 30px;
+  }
+  .a_b_txt3 {
+    top: 60px;
   }
 }
 @media (max-width: 900px) {
@@ -1138,11 +1094,13 @@ header {
   .scroll_txt_box {
     transform: translate(-1px, 143px) rotate(-90deg);
   }
+  .work_box {
+    height: 65vh;
+  }
   .work_img_outer {
     height: 430px;
   }
   .work_img_inner {
-    width: 100%;
     height: 85%;
   }
   .work_btn_sec {
@@ -1163,23 +1121,77 @@ header {
   .w_dt_desc_cp {
     font-size: 1.5vw;
   }
+  .contact .sec {
+    height: 80vh;
+  }
   .contact_box p {
     margin-top: 10px;
   }
 }
 @media (max-width: 876px) {
-  .w_skill {
-    padding: 7px;
+  .work_box {
+    height: auto;
+    display: block;
+  }
+  .work_img_outer {
+    width: 65%;
+    height: 520px;
+    margin: 0 auto;
+  }
+  .work_btn_sec {
+    padding-top: 30px;
   }
   .work_detail {
-    padding: 15px;
+    width: 70%;
+    margin: 30px auto;
+    padding: 30px;
     border-radius: 12px;
+  }
+  .w_skill {
+    padding: 10px;
+  }
+  .react_box_sec {
+    display: inline-block;
+    height: 760px;
+  }
+  .react_tit {
+    font-size: 4vw;
   }
   .react_hov_txt {
     font-size: 24px;
   }
+  .react_box {
+    width: calc((100% - 40px) / 2);
+    height: 45%;
+    float: left;
+  }
+  .react_txt_box {
+    padding: 12px;
+  }
+  .react_txt_tit {
+    line-height: 6;
+  }
+  .react_txt_desc {
+    display: none;
+  }
+  .react_hov_box:hover .line_left,
+  .react_hov_box:hover .line_right {
+    height: 83%;
+  }
+  .react_hov_box a {
+    margin: 0;
+  }
+  .react_hov_txt {
+    font-size: 22px;
+  }
+  .contact .sec {
+    height: 75vh;
+  }
 }
 @media (max-width: 767px) {
+  .wave {
+    height: 70vh;
+  }
   .header_wrap {
     height: 58px;
   }
@@ -1230,6 +1242,9 @@ header {
     margin: 0 10px;
     padding: 15px;
   }
+  .sec {
+    height: 70vh;
+  }
   .sk_sec {
     margin-bottom: 5px;
   }
@@ -1243,23 +1258,28 @@ header {
     display: none;
   }
   .work_img_outer {
-    height: 370px;
+    height: 390px;
+  }
+  .work_btn_sec {
+    padding-top: 50px;
   }
   .go_btn {
-    height: 35px;
-    line-height: 35px;
+    height: 40px;
+    line-height: 40px;
   }
   .go_btn a {
     padding: 0 8%;
   }
   .source_btn {
-    height: 35px;
-    line-height: 35px;
+    height: 40px;
+    line-height: 40px;
   }
   .github_img {
     width: 12%;
   }
-
+  .work_detail {
+    margin: 50px auto;
+  }
   .work_box_item {
     margin-bottom: 5px;
   }
@@ -1270,68 +1290,37 @@ header {
     width: 30px;
     height: 30px;
   }
-  .react_box_sec {
-    display: inline-block;
-  }
-  .react_box {
-    width: calc((100% - 40px) / 2);
-    height: 45%;
-    float: left;
-  }
-  .react_txt_box {
-    padding: 12px;
-  }
-  .react_txt_desc {
-    display: none;
-  }
-  .react_hov_box:hover .line_left,
-  .react_hov_box:hover .line_right {
-    height: 83%;
-  }
-  .react_hov_box a {
-    margin: 0;
-  }
-  .react_hov_txt {
-    font-size: 22px;
-  }
 }
 @media (max-width: 710px) {
+  .about_sec1 {
+    height: 65vh;
+  }
+  .about_bot_txt {
+    font-size: 20px;
+  }
+  .sec {
+    height: 60vh;
+  }
   .go_btn {
-    width: calc((100% - 5px) / 2);
+    width: calc((100% - 40px) / 2);
     border: 1px solid #222;
   }
   .go_btn a {
-    padding: 0;
+    padding: 0 25%;
   }
   .source_btn {
     width: calc((100% - 5px) / 2);
   }
 }
 @media (max-width: 665px) {
-  .work_box {
-    height: auto;
-    display: block;
+  .go_btn a {
+    padding: 0px 15%;
   }
-  .work_img_outer {
-    width: 65%;
-    margin: 0 auto;
-  }
-  .work_img_inner {
-    height: 70%;
-  }
-  .work_btn_sec {
-    padding-top: 60px;
-  }
-  .work_detail {
-    width: 70%;
-    margin: 30px auto;
-  }
-  .work_box3 {
-    /* display: flex; */
-    height: 100vh;
+  .work_box4 {
+    height: 90vh;
   }
   .contact {
-    height: 60vh;
+    height: 45vh;
   }
   .contact_box {
     border-radius: 20px;
@@ -1350,30 +1339,35 @@ header {
     top: -12px;
     left: -16px;
   }
-  .about_bg {
-    display: inline-block;
+  .sec {
+    height: 50vh;
   }
-  .about_L_sec {
-    width: 100%;
-    height: auto;
-    padding: 0 5% 5%;
-    flex-direction: row;
+  .about_sec1 {
+    height: 55vh;
   }
-  .about_txt1 {
-    width: 120px;
-    height: auto;
+  .about_bot_txt {
+    font-size: 16px;
   }
-  .about_M_sec {
-    width: 30%;
-    height: 70%;
-    display: inline-block;
-    margin: 0 5%;
+  .a_b_txt2 {
+    top: 24px;
   }
-  .about_R_sec {
-    width: 50%;
-    height: auto;
-    float: right;
-    margin: 5%;
+  .a_b_txt3 {
+    top: 48px;
+  }
+  .about_detail_box {
+    padding: 5% 1%;
+  }
+  .ab_detail_tit {
+    padding: 9px 6px;
+  }
+  .work_btn_sec {
+    padding-top: 20px;
+  }
+  .go_btn a {
+    padding: 0;
+  }
+  .work_detail {
+    margin: 30px auto;
   }
 }
 @media (max-width: 480px) {
@@ -1387,9 +1381,6 @@ header {
   .skills_pan {
     width: 80%;
     margin: 20px;
-  }
-  .react_tit {
-    font-size: 4vw;
   }
   .contact {
     display: block;
@@ -1411,7 +1402,10 @@ header {
   .gnb_menu {
     padding: 10px 6px;
   }
-  .aboutme {
-    height: 80vh;
+  .ab_detail_tit {
+    width: 90px;
+    height: 45px;
+    line-height: 5.5;
+    padding: 0px 4px;
   }
 }
