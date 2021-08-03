@@ -1,13 +1,12 @@
 let userAgent = window.navigator.userAgent.toLowerCase(); 
 let isIE = userAgent.indexOf('trident');  
 let isIE2= userAgent.indexOf("msie");
-
 if(isIE > -1 || isIE2 > -1 ){ 
     alert("해당 브라우저에서 지원하지 않습니다.\n크롬으로 접속 부탁드립니다.")
 }
+
 $(document).ready(function(){
     /////////////////// 물결효과 ///////////////////
-    
     $('.wave').ripples({
         resolution: 130,
         perturbance: 0.01
@@ -22,7 +21,6 @@ $(document).ready(function(){
     },600);
     
     /////////////////// 헤더스크롤 ////////////////////
-    // let h_top = $('header').height();
     var sec2_top = $('.aboutme').offset().top;
     $(window).scroll(function(){
         var s_top = $(window).scrollTop();
@@ -35,6 +33,7 @@ $(document).ready(function(){
             $('.logo').removeClass('logo_ac')
         }
     });
+
     /////////////////// 메뉴 부드럽게 이동 ////////////////////
     $('.gnb_menu a, .logo a').click(function(){
         event.preventDefault();
@@ -46,8 +45,6 @@ $(document).ready(function(){
             scrollTop: o_top
         }, 100, 'linear')
     });
-
-
 
     /////////////////// scrolldown 화살표 ////////////////////
     $('.scroll_down .arrow_down').hover(function(){
@@ -83,7 +80,6 @@ $(document).ready(function(){
             }, 800)
         
             if(del < 0) {
-                // scrollEvent = true;
                 $('html,body').stop().animate({
                     scrollTop: sec2_top
                 },300)
@@ -101,8 +97,6 @@ $(document).ready(function(){
     $(window).scroll(function(){
         let left = ($(window).scrollTop() / ($(document).outerHeight() - $(window).height()));
 
-        // console.log(left);
-// console.log($('.about_bot_txt').eq(0).outerWidth())
         $('.about_bot_txt').eq(0).css({
             transform:'translateX('+ (left * $(window).scrollTop())+100+'px)'
         })
@@ -113,52 +107,12 @@ $(document).ready(function(){
             transform:'translateX('+ (left * $(window).scrollTop())+100 +'px)'
         })
     });
-    /////////////////// 글자 한칸씩 찍기 ////////////////////
-    
-    let txt_array = [];
-    let txt_length = $('.about_txt').length;
-
-    for(let i=0; i<txt_length; i++) {
-        if($('.about_txt').eq(i).text().length > 0) {
-            txt_array.push($('.about_txt').eq(i).text())
-        }
-        else {
-            txt_array.push("<br>") 
-        }
-    }
-    $('.about_txt1').empty();
-    function typing() {
-        let tp_timer = 260;
-        let tp_index = 0;
-        
-        let inter_1 = setInterval(function(){
-            
-            let txt_box = $('.about_txt1').html() + txt_array[tp_index++ % txt_length];
-            $('.about_txt1').html( txt_box )
-
-            if(tp_index >= txt_length) {
-                clearInterval(inter_1);
-
-                let inter_2 = setInterval(function(){
-                    txt_box = $('.about_txt1').html().slice(0, -1);
-                    $('.about_txt1').html( txt_box );
-                    tp_index--;
-
-                    if(tp_index < 0) {
-                        clearInterval(inter_2);
-                        typing();
-                    }
-                }, tp_timer-100);
-            }
-        }, tp_timer)
-    };
-    // typing();
-    
 
     /////////////////// 스크롤 스킬박스 하나씩 나오게 ////////////////////
     let sk_top = $('.skills').offset().top;
     let work_top1 = $('.work_box1').offset().top;
     let work_top2 = $('.work_box2').offset().top;
+    let work_top3 = $('.work_box3').offset().top;
     
     $(window).scroll(function(){
         let s_top = $(window).scrollTop();
@@ -172,7 +126,7 @@ $(document).ready(function(){
             }
         }
         
-        /////////////////// 스크롤 포폴박스 나오게 ////////////////////
+        /////스크롤 포폴박스 나오게 ////
         if(work_top1 <= s_top + 300) {
             for(let i=0; i<$('.work_box1 .work_box_item').length; i++) {
                 (function(wk_i){
@@ -187,6 +141,15 @@ $(document).ready(function(){
                 (function(wk_i){
                     setTimeout(function(){
                         $('.work_box2 .work_box_item').eq(wk_i).addClass('wk_ac');
+                    }, 60 * wk_i)
+                })(i) 
+            }
+        }
+        if(work_top3 <= s_top + 300) {
+            for(let i=0; i<$('.work_box3 .work_box_item').length; i++) {
+                (function(wk_i){
+                    setTimeout(function(){
+                        $('.work_box3 .work_box_item').eq(wk_i).addClass('wk_ac');
                     }, 60 * wk_i)
                 })(i) 
             }
