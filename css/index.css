@@ -707,6 +707,7 @@ header {
   font-family: "Cafe24SsurroundAir";
   box-shadow: rgb(22 22 26 / 5%) 0px 5px 16px, rgb(22 22 26 / 5%) 0px 5px 32px;
   border-radius: 17px;
+  overflow: hidden;
 }
 .work_box_item {
   width: 100%;
